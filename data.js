@@ -2,11 +2,11 @@
 
 const runAndBunTeam = [
   {
-    name: "Urshifu (Rapid Strike)",
+    name: "Urshifu",
     sprite: "images/pokemon/run-and-bun/urshifurapidstrike.gif",
     types: ["water", "fighting"],
     level: 100,
-    description: "For the Run and Bun League, a fighting type is essential, and Urshifu is always the top choice. Nearly all victors of Run and Bun have an Urshifu in their final team, regardless of form. \
+    description: "Nearly all victors of Run and Bun have an Urshifu in their final team, regardless of form. \
     Both forms have their uses, but Jan got the Rapid Strike Form after evolving Kubfu. It was exceptional in dealing huge physical damage, clearing out run-ending dark types like Darkrai. \
     It also helped with dealing chip damage to E4 Drake's Suicune (and decreasing its defense with Rock smash), arguably one of the biggest threats in the League. \
     It clinched the kill on Champion Wallace's Mega Swampert with Aqua Jet before dying to his last Pokemon Palkia.",
