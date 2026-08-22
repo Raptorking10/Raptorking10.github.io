@@ -176,7 +176,7 @@
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const value = Math.round(progress * target);
-      el.textContent = value;
+      el.textContent = value + (progress === 1 ? (el.getAttribute("data-suffix") || "") : "");
       if (progress < 1) {
         requestAnimationFrame(tick);
       }

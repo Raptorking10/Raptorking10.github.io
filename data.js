@@ -1,32 +1,4 @@
-/*
-  EDIT ME
-  -------
-  These are placeholder Elite Four rosters -- not verified data from pChal's
-  actual runs. Replace each entry with the real Pokemon, level,
-  description, and moveset he brought to the Elite Four for each run.
 
-  "types" accepts: normal, fire, water, electric, grass, ice, fighting,
-  poison, ground, flying, psychic, bug, rock, ghost, dragon, dark,
-  steel, fairy
-
-  "description" supplies the flip side of each card. Keep it brief: it is
-  displayed when a visitor flips the moveset card.
-
-  Add an optional "mega" object to give a Pokemon a Mega Evolution toggle.
-  It accepts name, sprite, types, and description. The Mega form keeps the
-  base form's level and moves.
-
-  "sprite" is a path to a local image file -- static (.png/.jpg) or
-  animated (.gif) both work, since it's rendered as a plain <img>.
-  Drop your Pokemon sprites into images/pokemon/run-and-bun/ and
-  images/pokemon/emerald-kaizo/ (or point the path anywhere else you
-  like). Leave a path that does not exist and the card will show a
-  placeholder box automatically -- nothing breaks.
-
-  Each move is now an object: { name: "Move Name", type: "water" }.
-  The "type" drives the small colored indicator next to the move --
-  set it to that move's actual type.
-*/
 
 const runAndBunTeam = [
   {
@@ -64,14 +36,15 @@ const runAndBunTeam = [
   {
     name: "Thundurus",
     sprite: "images/pokemon/run-and-bun/thundurus.gif",
-    types: ["electric"],
+    types: ["electric", "flying"],
     level: 99,
-    description: "A storm-bringing Legendary Pokemon that commands thunder and turbulent skies.",
+    description: "Being one of the best roamer legendaries because of its Prankster ability, Thundurus was able to simultaneously provide Thunder Wave support and deal damage. \
+    Volt switch was essential for pivoting out. Its major contributions include slowing down E4 Drake's Mega Salamence and Champion Wallace's Barraskewda, as well as OHKOing his Primal Kyogre with Electric Gem. ",
     moves: [
-      { name: "Move 1", type: "electric" },
-      { name: "Move 2", type: "normal" },
-      { name: "Move 3", type: "electric" },
-      { name: "Move 4", type: "normal" }
+      { name: "Thunder Wave", type: "electric" },
+      { name: "Electroweb", type: "electric" },
+      { name: "Thunder Punch", type: "electric" },
+      { name: "Volt Switch", type: "electric" }
     ]
   },
   {
@@ -136,7 +109,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/salamence.gif",
     types: ["dragon", "flying"],
     level: 100,
-    description: "A fearsome Dragon- and Flying-type that overwhelms opponents with raw power and coverage.",
+    description: "Mailman the Salamence was engineered to have Maximum attack, allowing it to power through many threats such as E4 Sidney's Houndoom and Machamp. \
+    It also had Intimidate, one of the best Pokemon abilities in history which crippled opposing physical attackers and in turn enabling other members of the team, allowing for easier strategizing.",
     moves: [
       { name: "Brick Break", type: "fighting" },
       { name: "Dragon Claw", type: "dragon" },
@@ -149,7 +123,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/ludicolo.gif",
     types: ["grass", "water"],
     level: 100,
-    description: "A cheerful Grass- and Water-type with a versatile toolkit for disrupting opponents.",
+    description: "It had abysmal stats so it couldn't reach its full potential, however it did provide crucial support using Fake Out to flinch, and Magical Leaf to sure hit opponents even through accuracy drops. \
+    Unfortunately it died against Glacia's Swampert due to an unlucky critical hit (In one of Jan's previous failed runs, his Ludicolo also died to an unlucky critical hit from Glacia's Dewgong), making things much harder in the upcoming Drake fight.",
     moves: [
       { name: "Fake Out", type: "normal" },
       { name: "Giga Drain", type: "grass" },
@@ -162,7 +137,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/slowbro.gif",
     types: ["water", "psychic"],
     level: 100,
-    description: "A durable Water- and Psychic-type that can absorb pressure and retaliate from either side.",
+    description: "Initially, Jan wanted to use Milotic instead for a safer E4 Drake battle. However, the one he caught had unsatisfactory stats, so he reverted to Slowbro and Wobbuffet. \
+    Still, Slowbro was extremely useful throughout the whole run, having access to multiple support moves such as Disable, and can also serve as a stall heal bot by using Toxic and spamming Slack off. \ It also had access to Shell Armor in Emerald Kaizo, preventing crits altogether.",
     moves: [
       { name: "Surf", type: "water" },
       { name: "Flamethrower", type: "fire" },
@@ -175,7 +151,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/relicanth.gif",
     types: ["water", "rock"],
     level: 100,
-    description: "An ancient Water- and Rock-type built to take a hit before striking back hard.",
+    description: "Historian the Relicanth had Swift swim, a crucial ability to help it stand against E4 Glacia, one of the hardest fights in Emerald Kaizo with permanent rain. \
+    It was the perfect lead and took down two of the most threatening Pokemon on Glacia's team, Glalie and Regice. It also served as ground/rock coverage for other fights.",
     moves: [
       { name: "Head Smash", type: "rock" },
       { name: "Ancient Power", type: "rock" },
@@ -188,7 +165,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/dusclops.gif",
     types: ["ghost"],
     level: 100,
-    description: "A defensive Ghost-type whose unusual durability lets it stall and disrupt dangerous foes.",
+    description: "Exorcist the Dusclops was a good ghost type, its Shadow ball into priority Shadow sneak combo guaranteeing massive damage. In Emerald Kaizo, it was also buffed to have +50 base HP and +30 base Attack, making it a fearsome Pokemon to face. \
+    Standard Emerald Kaizo Elite 4 Teams almost always have a Dusclops, and Jan's was no exception. Exorcist also had Earthquake for needed additional ground coverage.",
     moves: [
       { name: "Ice Beam", type: "ice" },
       { name: "Shadow Sneak", type: "ghost" },
@@ -201,7 +179,8 @@ const emeraldKaizoTeam = [
     sprite: "images/pokemon/emerald-kaizo/wobbuffet.gif",
     types: ["psychic"],
     level: 100,
-    description: "A patient Psychic-type that turns an opponent's strongest attacks back against them.",
+    description: "Moderator the Wobuffet was built to be a full support Pokemon, able to dish out real damage through Mirror Coat/Counter, and locking opposing Pokemon into a move using Encore, allowing Jan to switch in other Pokemon safely. \
+    Built on Maximum HP, Moderator was able to survive a devastating Draco Meteor from Drake's Latios, killing it with Mirror Coat.",
     moves: [
       { name: "Destiny Bond", type: "ghost" },
       { name: "Mirror Coat", type: "psychic" },

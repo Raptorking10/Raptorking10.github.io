@@ -21,6 +21,7 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#what-is-a-nuzlocke" class="nav-link">What Is a Nuzlocke?</a></li>
       <li><a href="#achievements" class="nav-link">Achievements</a></li>
       <li><a href="#runandbun" class="nav-link">Run &amp; Bun</a></li>
       <li><a href="#emeraldkaizo" class="nav-link">Emerald Kaizo</a></li>
@@ -49,7 +50,7 @@
             <span class="stat-label">Signature Champion Runs</span>
           </div>
           <div class="stat">
-            <span class="stat-num" data-count="9">0</span>
+            <span class="stat-num" data-count="10" data-suffix="+">0</span>
             <span class="stat-label">Elite Four Battles Logged</span>
           </div>
           <div class="stat">
@@ -68,6 +69,32 @@
     </div>
   </section>
 
+  <!-- WHAT IS A NUZLOCKE -->
+  <section class="nuzlocke-explainer" id="what-is-a-nuzlocke">
+    <div class="section-head">
+      <p class="eyebrow">The Ruleset</p>
+      <h2>What is a Nuzlocke?</h2>
+      <p class="section-note">A self-imposed Pokémon challenge designed to make every decision count.</p>
+    </div>
+    <div class="nuzlocke-rules">
+      <article>
+        <span class="rule-number">01</span>
+        <h3>First encounter only</h3>
+        <p>On each new route or area, you may catch only the first Pokémon you encounter.</p>
+      </article>
+      <article>
+        <span class="rule-number">02</span>
+        <h3>Fainted means retired</h3>
+        <p>If a Pokémon faints, it is permanently boxed or released and cannot be used again.</p>
+      </article>
+      <article>
+        <span class="rule-number">03</span>
+        <h3>Hardcore adds limits</h3>
+        <p>Hardcore runs commonly ban items in battle, level caps, and over-leveling before major fights.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ACHIEVEMENTS -->
   <section class="achievements" id="achievements">
     <div class="section-head">
@@ -80,7 +107,7 @@
         <h3>Pokémon Run &amp; Bun</h3>
         <p class="badge-tag">Champion — Hardcore Nuzlocke</p>
         <p class="badge-desc">
-          A brutally reworked Fire Red hack stacked with mandatory boss fights and
+          A brutally reworked Emerald hack stacked with mandatory boss fights and
           fully-optimized AI trainers. Widely regarded as one of the toughest
           Nuzlocke hacks in the community.
         </p>
@@ -124,21 +151,21 @@
       <p class="eyebrow">Hall of Fame</p>
       <h2>Pokémon Run &amp; Bun</h2>
       <p class="section-note">
-        Placeholder roster — swap in pChal's actual Elite Four team below.
-        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+        Currently considered to be at the pinnacle of RomHack difficulty alongside Platinum Kaizo. It is extremely tedious to nuzlocke, with every single enemy team incorporating some sort of competitive strategy.
+        In mid to late game, planning just one fight can easily take an hour or more, requiring the player to do many calculations to know which Pokemon to bring.
       </p>
     </div>
     <div class="team-grid" id="runAndBunGrid"></div>
   </section>
 
   <!-- TEAM SECTION TEMPLATE (Emerald Kaizo) -->
-  <section class="team-section team-section--alt" id="emeraldkaizo">
+  <section class="team-section" id="emeraldkaizo">
     <div class="section-head">
       <p class="eyebrow">Hall of Fame</p>
       <h2>Emerald Kaizo</h2>
       <p class="section-note">
-        Placeholder roster — swap in pChal's actual Elite Four team below.
-        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+        A Generation 3 nuzlocke that used to be infamously known as the hardest RomHack to Nuzlocke before eventually being dethroned by Run and Bun. 
+        There were many balance changes applied to various Pokemon (some revamped entirely), contributing to its steep learning curve.
       </p>
     </div>
     <div class="team-grid" id="emeraldKaizoGrid"></div>
@@ -150,8 +177,8 @@
       <p class="eyebrow">Hall of Fame</p>
       <h2>Radical Red</h2>
       <p class="section-note">
-        Placeholder roster — swap in pChal's actual Elite Four team below.
-        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+        A difficulty RomHack based on Pokemon Red, it featured a revamped enemy AI, making it much smarter and as a result harder to plan fights. It embedded Pokemon and mechanics all the way up to Generation 8, making nuzlocking it overwhelming and challenging.
+        Furthermore, enemy teams were all competitively viable and had good held items. With the E4 and Champion having multiple legendaries at their disposal, Radical Red truly put itself up there as one of the most difficult RomHacks in history.
       </p>
     </div>
     <div class="team-grid" id="radicalRedGrid"></div>
