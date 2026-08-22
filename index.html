@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pChal — The Run Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<div class="route-line" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <nav class="nav">
+    <a class="nav-brand" href="#top">pChal<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#runandbun" class="nav-link">Run &amp; Bun</a></li>
+      <li><a href="#emeraldkaizo" class="nav-link">Emerald Kaizo</a></li>
+      <li><a href="#radicalred" class="nav-link">Radical Red</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="overview">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Nuzlocke Run Log</p>
+        <h1 class="hero-title">pChal</h1>
+        <p class="hero-sub">
+          Jan Krüger, better known as <strong>pChal</strong> (formerly Pokémon Challenges), is a German
+          Twitch streamer and YouTuber who has spent years putting Pokémon's hardest ROM hacks through
+          the Nuzlocke gauntlet — one life per encounter, no second chances.
+        </p>
+        <div class="hero-stats" id="heroStats">
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Signature Champion Runs</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="9">0</span>
+            <span class="stat-label">Elite Four Battles Logged</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="1">0</span>
+            <span class="stat-label">Life Per Encounter</span>
+          </div>
+        </div>
+        <a href="#achievements" class="hero-cta">View the ledger ↓</a>
+      </div>
+
+      <div class="hero-photo">
+        <div class="img-slot img-slot--portrait" data-placeholder-label="Add photo/pchal.jpg">
+          <img src="images/photo/pchal.jpg" alt="pChal" onerror="this.closest('.img-slot').classList.add('img-slot--empty')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements" id="achievements">
+    <div class="section-head">
+      <p class="eyebrow">Badge Case</p>
+      <h2>Headline clears</h2>
+    </div>
+    <div class="badge-rack">
+      <article class="badge-card">
+        <div class="badge-icon" data-type="fire" aria-hidden="true">RB</div>
+        <h3>Pokémon Run &amp; Bun</h3>
+        <p class="badge-tag">Champion — Hardcore Nuzlocke</p>
+        <p class="badge-desc">
+          A brutally reworked Fire Red hack stacked with mandatory boss fights and
+          fully-optimized AI trainers. Widely regarded as one of the toughest
+          Nuzlocke hacks in the community.
+        </p>
+      </article>
+      <article class="badge-card">
+        <div class="badge-icon" data-type="dragon" aria-hidden="true">EK</div>
+        <h3>Emerald Kaizo</h3>
+        <p class="badge-tag">Champion — Hardcore Nuzlocke</p>
+        <p class="badge-desc">
+          A from-the-ground-up Kaizo overhaul of Pokémon Emerald, rebuilding every
+          trainer roster in Hoenn into a min-maxed gauntlet from Rustboro to the
+          Pokémon League.
+        </p>
+      </article>
+      <article class="badge-card">
+        <div class="badge-icon" data-type="psychic" aria-hidden="true">RR</div>
+        <h3>Radical Red</h3>
+        <p class="badge-tag">Champion — Hardcore Nuzlocke</p>
+        <p class="badge-desc">
+          A Fire Red hack built around competitive-level movesets and abilities
+          for every trainer, with adjustable difficulty modes that push AI
+          decision-making far past the vanilla games.
+        </p>
+      </article>
+      <article class="badge-card badge-card--muted">
+        <div class="badge-icon" data-type="normal" aria-hidden="true">+</div>
+        <h3>Years of Nuzlockes</h3>
+        <p class="badge-tag">Ongoing — Twitch &amp; YouTube</p>
+        <p class="badge-desc">
+          Beyond these three signature clears, pChal has run a long list of standard,
+          randomized, and hardcore Nuzlockes across the franchise on stream since
+          2016.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION TEMPLATE (Run & Bun) -->
+  <section class="team-section" id="runandbun">
+    <div class="section-head">
+      <p class="eyebrow">Hall of Fame</p>
+      <h2>Pokémon Run &amp; Bun</h2>
+      <p class="section-note">
+        Placeholder roster — swap in pChal's actual Elite Four team below.
+        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+      </p>
+    </div>
+    <div class="team-grid" id="runAndBunGrid"></div>
+  </section>
+
+  <!-- TEAM SECTION TEMPLATE (Emerald Kaizo) -->
+  <section class="team-section team-section--alt" id="emeraldkaizo">
+    <div class="section-head">
+      <p class="eyebrow">Hall of Fame</p>
+      <h2>Emerald Kaizo</h2>
+      <p class="section-note">
+        Placeholder roster — swap in pChal's actual Elite Four team below.
+        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+      </p>
+    </div>
+    <div class="team-grid" id="emeraldKaizoGrid"></div>
+  </section>
+
+  <!-- TEAM SECTION TEMPLATE (Radical Red) -->
+  <section class="team-section" id="radicalred">
+    <div class="section-head">
+      <p class="eyebrow">Hall of Fame</p>
+      <h2>Radical Red</h2>
+      <p class="section-note">
+        Placeholder roster — swap in pChal's actual Elite Four team below.
+        See <code>data.js</code> to edit species, levels, descriptions, and movesets.
+      </p>
+    </div>
+    <div class="team-grid" id="radicalRedGrid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <p class="eyebrow">Trainer Profile</p>
+      <h2>About pChal</h2>
+    </div>
+    <div class="about-body">
+      <p>
+        Jan Krüger (b. 1995) streams and uploads as <strong>pChal</strong> on Twitch and YouTube,
+        where his channel is built around Pokémon Nuzlocke challenges — a fan-made ruleset
+        that permanently retires any Pokémon that faints and limits the player to the first
+        encounter in each area. He is candid on-camera about the grind behind his runs,
+        which is part of what has built a loyal following around his content.
+      </p>
+      <p>
+        His three most talked-about clears are <strong>Pokémon Run &amp; Bun</strong>,
+        <strong>Emerald Kaizo</strong>, and <strong>Radical Red</strong> — ROM hacks
+        built specifically to punish Nuzlocke players with fully reworked,
+        over-leveled trainer teams from the first gym onward.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Fan tribute page for pChal · Not affiliated with Nintendo, Game Freak, or The Pokémon Company.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
