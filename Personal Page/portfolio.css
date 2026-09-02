@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(47, 46, 46);
+    color: white;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.imagewrapper {
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.aboutwrapper {
+    border-radius: 15px;
+    background-color: grey;
+    box-shadow: 0 0 6px rgb(188, 188, 188);
+}
+
+.projectcards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    box-shadow: 0 0 6px rgb(188, 188, 188);
+    background-color: grey;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px;
+    transition: all 0.4s ease;
+}
+.project:hover {
+    transform: scale(1.1);
+}
+
+.btnlink {
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 10px;
+}
+
